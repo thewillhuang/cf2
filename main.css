@@ -1,0 +1,10 @@
+html, body {
+  margin-top: 20px;
+}
+
+.todo {
+  color: red;
+  cursor: pointer;
+  font-size: 1.8em;
+  line-height: 2;
+}
