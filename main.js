@@ -1,20 +1,20 @@
-$(function(){
-  console.log("ready");
+$(document).ready(function() {
 
-  var addTodo = function(e) {
+  var addItem = function(el) {
     var newTodo = $('<div class="todo">');
     newTodo.html($('#todo').val());
 
-    e.preventDefault();
+    el.preventDefault();
 
     $('#todo-list').append(newTodo);
     $('#todo').val('');
   };
 
-  var removeTodo = function() {
+  var removeItem = function() {
     $(this).remove();
   };
 
-  $('#todo-form').on('submit', addTodo);
-  $('#todo-list').on('click', 'div', removeTodo);
+  $('#todo-form').on('submit', addItem);
+  $('#todo-list').on('click', 'div', removeItem);
+
 });
